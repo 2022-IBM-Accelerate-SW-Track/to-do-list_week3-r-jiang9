@@ -23,12 +23,6 @@ class AddTodo extends Component {
       date: Date().toLocaleString('en-US'),
     });
   };
-
-  changeDueDate = (event) => {
-    this.setState({
-      due: new Date(event).toLocaleString()
-    })
-  }
   // The handleSubmit function collects the forms input and puts it into the react state.
   // event.preventDefault() is called to prevents default event behavior like refreshing the browser.
   // this.props.addTodo(this.state) passes the current state (or user input and current date/time) into the addTodo function defined
@@ -50,6 +44,7 @@ class AddTodo extends Component {
       due: new Date(event).toLocaleDateString(),
     })
   }
+
   render() {
     return (
       // 1. When rendering a component, you can render as many elements as you like as long as it is wrapped inside
@@ -80,6 +75,7 @@ class AddTodo extends Component {
           onClick={this.handleSubmit}
           variant="contained"
           color="primary"
+          data-testid="new-item-button"
         >
           Add
         </Button>

@@ -29,7 +29,7 @@ class Home extends Component {
   // updates the state with the new list.
   addTodo = (todo) => {
     const exists = this.state.todos.find(t => t.content === todo.content);
-    if (todo.due === null || todo.due === "Invalid Date" || exists){
+    if (todo.due === null || todo.due === "Invalid Date"){
        return 
     }
  
